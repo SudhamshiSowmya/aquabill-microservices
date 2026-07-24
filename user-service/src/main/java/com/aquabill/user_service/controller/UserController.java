@@ -9,27 +9,27 @@ import com.aquabill.user_service.model.User;
 import com.aquabill.user_service.service.UserService;
 
 
-@RestController
-@RequestMapping("/users")
-public class UserController {
+    @RestController
+    @RequestMapping("/users")
+    public class UserController {
 
 
-    @Autowired
-    private UserService userService;
-
-
-
-    // CREATE USER
-    @PostMapping
-    public User createUser(@RequestBody User user) {
-
-        return userService.createUser(user);
-    }
+        @Autowired
+        private UserService userService;
 
 
 
-    // GET ALL USERS
-    @GetMapping
+        // CREATE USER
+        @PostMapping
+        public User createUser(@RequestBody User user) {
+
+            return userService.createUser(user);
+        }
+
+
+
+        // GET ALL USERS
+        @GetMapping
     public List<User> getAllUsers() {
 
         return userService.getAllUsers();
