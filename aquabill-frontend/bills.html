@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AquaBill - Bills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>Billing Records</h1>
+<table border="1" cellspacing="0" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer ID</th>
+            <th>Amount</th>
+            <th>Billing Month</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="billTable">
+        <tr>
+            <td colspan="5">Loading...</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<a href="index.html">
+    <button>⬅ Back Home</button>
+</a>
+
+<script>
+
+fetch("http://localhost:8080/bills")
+.then(response => response.json())
+
+.then(data => {
+
+    let rows = "";
+
+    data.forEach(bill => {
+
+        rows += `
+        <tr>
+            <td>${bill.id}</td>
+            <td>${bill.customerId}</td>
+            <td>${bill.amount}</td>
+            <td>${bill.billingMonth}</td>
+            <td>${bill.status}</td>
+        </tr>
+        `;
+
+    });
+
+    document.getElementById("billTable").innerHTML = rows;
+
+})
+
+.catch(error => {
+
+    console.log(error);
+
+    document.getElementById("billTable").innerHTML =
+        "<tr><td colspan='5'>Failed to load bills</td></tr>";
+
+});
+
+</script>
+
+</body>
+</html>
