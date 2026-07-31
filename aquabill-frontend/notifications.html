@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AquaBill - Notifications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Notifications</h1>
+
+<table border="1" cellspacing="0" cellpadding="10">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Message</th>
+            <th>Type</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="notificationTable">
+        <tr>
+            <td colspan="5">Loading...</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<br>
+
+<a href="index.html">
+    <button>⬅ Back Home</button>
+</a>
+
+<script>
+
+fetch("http://localhost:8080/notifications")
+.then(response => response.json())
+.then(data => {
+
+    let rows = "";
+
+    data.forEach(notification => {
+
+        rows += `
+        <tr>
+            <td>${notification.id}</td>
+            <td>${notification.userId}</td>
+            <td>${notification.message}</td>
+            <td>${notification.type}</td>
+            <td>${notification.status}</td>
+        </tr>
+        `;
+
+    });
+
+    document.getElementById("notificationTable").innerHTML = rows;
+
+})
+.catch(error => {
+
+    console.log(error);
+
+    document.getElementById("notificationTable").innerHTML =
+        "<tr><td colspan='5'>Failed to load notifications</td></tr>";
+
+});
+
+</script>
+
+</body>
+</html>
