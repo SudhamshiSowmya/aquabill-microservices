@@ -1,6 +1,7 @@
- 💧 AquaBill - Smart Water Billing Management System
+ # AquaBill - Smart Water Billing Management System
 
-A microservices-based Smart Water Billing Management System developed using Spring Boot. The project manages users, customers, water bills, payments, and notifications through independent microservices connected using Eureka Server and API Gateway.
+AquaBill is a Smart Water Billing Management System built using Spring Boot Microservices architecture.  
+The system manages users, customers, billing, payments, and notifications through independent microservices..
 
 ---
 
@@ -112,17 +113,22 @@ MySQL Database
 
 ---
 
- Project Screenshots
+ ## API Screenshots
 
-- Home Dashboard
-- Users Page
-- Customers Page
-- Bills Page
-- Payments Page
-- Notifications Page
-- Eureka Dashboard
+### User Service - GET Users
+(Add users screenshot here)
 
-*(Screenshots will be added here.)*
+### Customer Service - GET Customers
+(Add customers screenshot here)
+
+### Billing Service - GET Bills
+(Add bills screenshot here)
+
+### Payment Service - GET Payments
+(Add payments screenshot here)
+
+### Notification Service - GET Notifications
+(Add notifications screenshot here)
 
 ---
 
