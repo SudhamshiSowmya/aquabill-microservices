@@ -1,52 +1,53 @@
- # AquaBill - Smart Water Billing Management System
+# AquaBill - Smart Water Billing Management System
 
-AquaBill is a Smart Water Billing Management System built using Spring Boot Microservices architecture.  
-The system manages users, customers, billing, payments, and notifications through independent microservices..
+## Overview
 
----
-
- Features
-
-- 👤 User Management
-- 🏠 Customer Management
-- 🧾 Billing Management
-- 💳 Payment Management
-- 🔔 Notification Management
-- 🌐 API Gateway
-- 📡 Eureka Service Discovery
-- 💾 MySQL Database
-- 🎨 Responsive Frontend
+AquaBill is a Smart Water Billing Management System developed using Spring Boot Microservices Architecture. The application manages users, customers, billing, payments, and notifications through independent microservices. It leverages Spring Cloud Gateway for request routing and Eureka Server for service discovery, providing a scalable and maintainable architecture.
 
 ---
 
- Tech Stack
+## Features
 
- Backend
+- User Management
+- Customer Management
+- Billing Management
+- Payment Management
+- Notification Management
+- API Gateway
+- Service Discovery using Eureka Server
+- MySQL Database Integration
+- Responsive Frontend
+
+---
+
+## Technology Stack
+
+### Backend
 - Java 17
 - Spring Boot
 - Spring Data JPA
 - Spring Cloud
-- Eureka Server
 - Spring Cloud Gateway
+- Eureka Server
 - Maven
 
-Database
-- MySQL
-
- Frontend
+### Frontend
 - HTML
 - CSS
 - JavaScript
 
-Tools
-- VS Code
+### Database
+- MySQL
+
+### Development Tools
+- Visual Studio Code
 - Postman
 - Git
 - GitHub
 
 ---
 
-Microservices
+## Microservices
 
 - Eureka Server
 - API Gateway
@@ -58,7 +59,7 @@ Microservices
 
 ---
 
- Project Structure
+## Project Structure
 
 ```text
 AquaBill-Microservices
@@ -71,77 +72,143 @@ AquaBill-Microservices
 ├── notification-service
 ├── payment-service
 ├── user-service
+├── Screenshots
 └── README.md
 ```
 
 ---
 
- Architecture
+## System Architecture
 
 ```text
-Frontend
-    │
-    ▼
-API Gateway
-    │
-    ▼
-Eureka Server
-    │
-    ▼
---------------------------------------------
-| User Service                            |
-| Customer Service                        |
-| Billing Service                         |
-| Payment Service                         |
-| Notification Service                    |
---------------------------------------------
-    │
-    ▼
-MySQL Database
+                  Frontend
+                      │
+                      ▼
+                API Gateway
+                      │
+                      ▼
+               Eureka Server
+                      │
+      ┌──────────────────────────────┐
+      │        Microservices         │
+      │                              │
+      │  User Service                │
+      │  Customer Service            │
+      │  Billing Service             │
+      │  Payment Service             │
+      │  Notification Service        │
+      └──────────────────────────────┘
+                      │
+                      ▼
+               MySQL Database
 ```
 
 ---
 
- How to Run
+## API Endpoints
 
-1. Start MySQL.
-2. Start Eureka Server.
-3. Start API Gateway.
-4. Start all Microservices.
-5. Open the frontend using Live Server.
-6. Access the application from the browser.
-
----
-
- ## API Screenshots
-
-### User Service - GET Users
-(Add users screenshot here)
-
-### Customer Service - GET Customers
-(Add customers screenshot here)
-
-### Billing Service - GET Bills
-(Add bills screenshot here)
-
-### Payment Service - GET Payments
-(Add payments screenshot here)
-
-### Notification Service - GET Notifications
-(Add notifications screenshot here)
+| Service | Endpoint |
+|----------|----------|
+| User Service | `http://localhost:8081/users` |
+| Customer Service | `http://localhost:8082/customers` |
+| Billing Service | `http://localhost:8083/bills` |
+| Payment Service | `http://localhost:8084/payments` |
+| Notification Service | `http://localhost:8085/notifications` |
 
 ---
 
-Developer
+## Project Screenshots
+
+### Home Page
+
+![Home Page](Screenshots/home.png)
+
+---
+
+### User Service
+
+![User Service](Screenshots/users.png)
+
+---
+
+### Customer Service
+
+![Customer Service](Screenshots/customers.png)
+
+---
+
+### Billing Service
+
+![Billing Service](Screenshots/bills.png)
+
+---
+
+### Payment Service
+
+![Payment Service](Screenshots/payments.png)
+
+---
+
+### Notification Service
+
+![Notification Service](Screenshots/notifications.png)
+
+---
+
+### Eureka Dashboard
+
+![Eureka Dashboard](Screenshots/eureka-dashboard.png)
+
+---
+
+### Project Structure
+
+![Project Structure](Screenshots/project-structure.png)
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Java 17
+- Maven
+- MySQL
+- Git
+- Visual Studio Code
+
+### Installation
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/<your-username>/AquaBill-Microservices.git
+```
+
+2. Open the project in Visual Studio Code.
+
+3. Configure the MySQL database in each microservice's `application.properties` file.
+
+4. Start the Eureka Server.
+
+5. Start the API Gateway.
+
+6. Run all the microservices.
+
+7. Launch the frontend using Live Server.
+
+---
+
+## Developer
 
 **Sudhamshi Sowmya Kongari**
 
-B.Tech - Computer Science & Engineering (AI & ML)
-
+Bachelor of Technology  
+Computer Science and Engineering (Artificial Intelligence and Machine Learning)  
 Parul University
 
 ---
 
-License
+## License
 
-This project was developed for learning and internship purposes.
+This project was developed for academic learning and internship purposes.
