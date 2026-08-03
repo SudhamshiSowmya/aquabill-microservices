@@ -1,4 +1,4 @@
-package com.aquabill.api_gateway.config;
+package com.aquabill.apigateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
