@@ -20,6 +20,15 @@ AquaBill is a Smart Water Billing Management System developed using Spring Boot 
 
 ---
 
+## Project Workflow
+
+1. User accesses the application through the frontend.
+2. API Gateway receives and routes the request.
+3. Eureka Server identifies the required microservice.
+4. The selected microservice processes the request.
+5. Data is stored or retrieved from the MySQL database.
+6. The response is returned to the frontend.
+
 ## Technology Stack
 
 ### Backend
